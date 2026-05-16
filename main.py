@@ -59,7 +59,7 @@ BANNER = f"""
 class Config:
     """Centralized configuration — tweak these values as needed."""
     # Paths
-    GECKO_DRIVER_PATH = os.getenv("GECKO_DRIVER_PATH", r"C:\developer\geckodriver.exe")
+    GECKO_DRIVER_PATH = r"C:\developer\geckodriver\geckodriver.exe"
     OUTPUT_DIR = os.getenv("OUTPUT_DIR", "./github_recon_output")
     
     # Browser settings
@@ -240,33 +240,34 @@ class GuruScraper:
         log.info(f"{Fore.GREEN}[+] Output directory: {self.output_dir}{Style.RESET_ALL}")
     
     def _init_driver(self) -> webdriver.Firefox:
-        """Initialize a headless/visible Firefox driver with anti-detection measures."""
+        """Initialize Firefox driver properly with geckodriver path."""
+
         options = Options()
-        
+
+        # Firefox binary (ONLY if needed)
+        firefox_path = r"C:\Program Files\Mozilla Firefox\firefox.exe"
+        if os.path.exists(firefox_path):
+            options.binary_location = firefox_path
+
+        # Headless mode
         if Config.HEADLESS:
             options.add_argument("--headless")
-        
-        # Anti-bot measures
+
+        # Anti-bot + performance tweaks
         options.set_preference("dom.webdriver.enabled", False)
         options.set_preference("useAutomationExtension", False)
-        options.set_preference("general.useragent.override", 
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0")
-        options.set_preference("media.peerconnection.enabled", False)
-        
-        # Performance
-        options.set_preference("browser.cache.disk.enable", False)
-        options.set_preference("browser.cache.memory.enable", False)
-        options.set_preference("browser.sessionhistory.max_entries", 2)
-        
-        # Block images for speed
+        options.set_preference(
+            "general.useragent.override",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0"
+        )
         options.set_preference("permissions.default.image", 2)
-        options.set_preference("dom.disable_beforeunload", True)
-        
-        service = Service(Config.GECKO_DRIVER_PATH)
-        driver = webdriver.Firefox(service=service, options=options)
+
+        # IMPORTANT FIX: geckodriver service
+        driver = webdriver.Firefox(options=options)
+
         driver.set_page_load_timeout(Config.PAGE_LOAD_TIMEOUT)
         driver.implicitly_wait(Config.IMPLICIT_WAIT)
-        
+
         return driver
     
     def _safe_get(self, driver: webdriver.Firefox, url: str) -> bool:
@@ -303,7 +304,7 @@ class GuruScraper:
             # If still empty, try the org/repo tab
             if not repos:
                 elements = driver.find_elements(By.XPATH, 
-                    "//a[contains(@href, '/") and contains(@href, "')]")
+                    '//a[contains(@href, "/")]')
                 repos = list(set([
                     el.get_attribute("href").split("/")[-1] 
                     for el in elements 

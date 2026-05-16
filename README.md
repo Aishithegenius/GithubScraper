@@ -9,7 +9,8 @@
 ## ✨ Features
 
 ### 🧠 Secret Detection (50+ Patterns)
-Detect **50+ types of secrets** including:
+
+Detect **secrets** including:
 | Category | Examples |
 |----------|----------|
 | ☁️ **Cloud Keys** | AWS Access Keys, Google API Keys, Azure Storage Keys, DigitalOcean Tokens |
@@ -21,19 +22,23 @@ Detect **50+ types of secrets** including:
 | 📄 **Config Files** | `.env`, `Dockerfile`, `docker-compose`, `kubeconfig`, Terraform Tokens |
 
 ### 🧬 Entropy-Based Heuristic Scanning
+
 Catches **custom/proprietary secret formats** that regex-based scanners miss using Shannon entropy analysis (>3.5 = flagged).
 
 ### 🔄 Recursive Directory Traversal
+
 Walks entire repository trees (configurable depth up to 5 levels) — not just root directories.
 
 ### 📊 Triple-Report Output
-| Report | Format | Use Case |
-|--------|--------|----------|
-| **Dashboard** | HTML | Visual summary with severity color-coding |
-| **Structured** | JSON | Programmatic analysis, SIEM ingestion |
-| **Spreadsheet** | CSV | Excel/Sheets, client reporting, remediation tracking |
+
+| Report          | Format | Use Case                                             |
+| --------------- | ------ | ---------------------------------------------------- |
+| **Dashboard**   | HTML   | Visual summary with severity color-coding            |
+| **Structured**  | JSON   | Programmatic analysis, SIEM ingestion                |
+| **Spreadsheet** | CSV    | Excel/Sheets, client reporting, remediation tracking |
 
 ### 🚀 Advanced Capabilities
+
 - 🧵 **Multi-threaded** architecture for speed
 - 🔐 **GitHub PAT support** for private repos + higher rate limits
 - 🎭 **Anti-bot evasion** (custom user-agent, headless mode)
@@ -48,20 +53,21 @@ Walks entire repository trees (configurable depth up to 5 levels) — not just r
 ## 📦 Installation
 
 ### Prerequisites
+
 - Python 3.8+
 - Firefox browser
 - Geckodriver
 
-### Quick Install
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/github-recon-scraper.git
-cd github-recon-scraper
-
 # Install Python dependencies
+
 pip install -r requirements.txt
 
 # Download geckodriver (Linux)
+
 wget https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz
 tar -xzf geckodriver-v0.35.0-linux64.tar.gz
 sudo mv geckodriver /usr/local/bin/
+
+# To Test
+
+python main.py -t octocat -d 1 --headless
