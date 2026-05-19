@@ -348,7 +348,19 @@ class GuruScraper:
                 return files_found
             
             # Get directory contents
-            items = driver.find_elements(By.CLASS_NAME, "js-navigation-open")
+            # Get directory contents — try multiple selectors
+            items = driver.find_elements(By.CSS_SELECTOR, 
+                "a.js-navigation-open, [data-testid='directory-item'], a[href*='/blob/'], a[href*='/tree/'], .react-directory-row-name-cell-large-screen a")
+            
+            # If still empty, try role-based selectors (new GitHub UI)
+            if not items:
+                items = driver.find_elements(By.XPATH, 
+                    "//a[contains(@href, '/blob/') or contains(@href, '/tree/')]")
+            
+            # Last resort: get all links in the file list
+            if not items:
+                items = driver.find_elements(By.CSS_SELECTOR, 
+                    "div[role='row'] a, td[class*='content'] a")
             
             for item in items:
                 try:
@@ -846,7 +858,7 @@ class GuruScraper:
                     files = self._walk_directory(driver, repo_url)
                     repo_data["files"] = files
                     
-                    log.info(f"{Fore.GREEN}   → Found {len(files)} items in {repo_name}{Style.RESET_ALL}")
+                    log.info(f"{Fore.GREEN}   -> Found {len(files)} items in {repo_name}{Style.RESET_ALL}")
                 
                 with self.lock:
                     self.results["repos"].append(repo_data)
@@ -860,8 +872,8 @@ class GuruScraper:
         finally:
             driver.quit()
             self._generate_report()
-            log.info(f"{Fore.GREEN}[✓] Scan complete. Results in: {self.output_dir}{Style.RESET_ALL}")
-
+            
+            log.info(f"{Fore.GREEN}[+] Scan complete. Results in: {self.output_dir}{Style.RESET_ALL}")
 
 # ─── CLI ENTRY POINT ─────────────────────────────────────────────────────────
 def main():
