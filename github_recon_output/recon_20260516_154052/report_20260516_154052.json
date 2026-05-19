@@ -1,0 +1,176 @@
+{
+  "scan_metadata": {
+    "target": "octocat",
+    "started_at": "2026-05-16T15:40:52.454297",
+    "depth": 1,
+    "token_configured": false
+  },
+  "repos": [
+    {
+      "name": "git-consortium",
+      "url": "https://github.com/octocat/git-consortium",
+      "files": []
+    },
+    {
+      "name": "hello-worId",
+      "url": "https://github.com/octocat/hello-worId",
+      "files": [
+        {
+          "name": "README.md",
+          "url": "https://github.com/octocat/hello-worId/blob/master/README.md",
+          "type": "file",
+          "path": "README.md"
+        }
+      ]
+    },
+    {
+      "name": "test-repo1",
+      "url": "https://github.com/octocat/test-repo1",
+      "files": [
+        {
+          "name": "2015-04-12-test-post-last-year.md",
+          "url": "https://github.com/octocat/test-repo1/blob/gh-pages/2015-04-12-test-post-last-year.md",
+          "type": "file",
+          "path": "2015-04-12-test-post-last-year.md"
+        },
+        {
+          "name": "2016-02-24-first-post.md",
+          "url": "https://github.com/octocat/test-repo1/blob/gh-pages/2016-02-24-first-post.md",
+          "type": "file",
+          "path": "2016-02-24-first-post.md"
+        },
+        {
+          "name": "2016-02-26-sample-post-jekyll.md",
+          "url": "https://github.com/octocat/test-repo1/blob/gh-pages/2016-02-26-sample-post-jekyll.md",
+          "type": "file",
+          "path": "2016-02-26-sample-post-jekyll.md"
+        }
+      ]
+    },
+    {
+      "name": "boysenberry-repo-1",
+      "url": "https://github.com/octocat/boysenberry-repo-1",
+      "files": [
+        {
+          "name": "README.md",
+          "url": "https://github.com/octocat/boysenberry-repo-1/blob/master/README.md",
+          "type": "file",
+          "path": "README.md"
+        },
+        {
+          "name": "READTHIS.md",
+          "url": "https://github.com/octocat/boysenberry-repo-1/blob/master/READTHIS.md",
+          "type": "file",
+          "path": "READTHIS.md"
+        },
+        {
+          "name": "_config.yml",
+          "url": "https://github.com/octocat/boysenberry-repo-1/blob/master/_config.yml",
+          "type": "file",
+          "path": "_config.yml"
+        }
+      ]
+    },
+    {
+      "name": "Spoon-Knife",
+      "url": "https://github.com/octocat/Spoon-Knife",
+      "files": [
+        {
+          "name": "README.md",
+          "url": "https://github.com/octocat/Spoon-Knife/blob/main/README.md",
+          "type": "file",
+          "path": "README.md"
+        },
+        {
+          "name": "index.html",
+          "url": "https://github.com/octocat/Spoon-Knife/blob/main/index.html",
+          "type": "file",
+          "path": "index.html"
+        },
+        {
+          "name": "styles.css",
+          "url": "https://github.com/octocat/Spoon-Knife/blob/main/styles.css",
+          "type": "file",
+          "path": "styles.css"
+        }
+      ]
+    },
+    {
+      "name": "linguist",
+      "url": "https://github.com/octocat/linguist",
+      "files": []
+    },
+    {
+      "name": "Hello-World",
+      "url": "https://github.com/octocat/Hello-World",
+      "files": []
+    },
+    {
+      "name": "octocat.github.io",
+      "url": "https://github.com/octocat/octocat.github.io",
+      "files": []
+    }
+  ],
+  "secrets_found": [],
+  "interesting_files": [
+    {
+      "name": "README.md",
+      "url": "https://github.com/octocat/hello-worId/blob/master/README.md",
+      "type": "file",
+      "path": "README.md"
+    },
+    {
+      "name": "2015-04-12-test-post-last-year.md",
+      "url": "https://github.com/octocat/test-repo1/blob/gh-pages/2015-04-12-test-post-last-year.md",
+      "type": "file",
+      "path": "2015-04-12-test-post-last-year.md"
+    },
+    {
+      "name": "2016-02-24-first-post.md",
+      "url": "https://github.com/octocat/test-repo1/blob/gh-pages/2016-02-24-first-post.md",
+      "type": "file",
+      "path": "2016-02-24-first-post.md"
+    },
+    {
+      "name": "2016-02-26-sample-post-jekyll.md",
+      "url": "https://github.com/octocat/test-repo1/blob/gh-pages/2016-02-26-sample-post-jekyll.md",
+      "type": "file",
+      "path": "2016-02-26-sample-post-jekyll.md"
+    },
+    {
+      "name": "README.md",
+      "url": "https://github.com/octocat/boysenberry-repo-1/blob/master/README.md",
+      "type": "file",
+      "path": "README.md"
+    },
+    {
+      "name": "READTHIS.md",
+      "url": "https://github.com/octocat/boysenberry-repo-1/blob/master/READTHIS.md",
+      "type": "file",
+      "path": "READTHIS.md"
+    },
+    {
+      "name": "_config.yml",
+      "url": "https://github.com/octocat/boysenberry-repo-1/blob/master/_config.yml",
+      "type": "file",
+      "path": "_config.yml"
+    },
+    {
+      "name": "README.md",
+      "url": "https://github.com/octocat/Spoon-Knife/blob/main/README.md",
+      "type": "file",
+      "path": "README.md"
+    }
+  ],
+  "summary": {
+    "target": "octocat",
+    "scan_duration": "0:04:45.298168",
+    "repos_scanned": 8,
+    "files_analyzed": 10,
+    "secrets_discovered": 0,
+    "critical_finds": 0,
+    "high_finds": 0,
+    "medium_finds": 0,
+    "interesting_files_count": 8
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "scan_metadata": {
+    "target": "octocat",
+    "started_at": "2026-05-16T15:27:58.433718",
+    "depth": 1,
+    "token_configured": false
+  },
+  "repos": [
+    {
+      "name": "linguist",
+      "url": "https://github.com/octocat/linguist",
+      "files": []
+    },
+    {
+      "name": "boysenberry-repo-1",
+      "url": "https://github.com/octocat/boysenberry-repo-1",
+      "files": []
+    },
+    {
+      "name": "octocat.github.io",
+      "url": "https://github.com/octocat/octocat.github.io",
+      "files": []
+    },
+    {
+      "name": "test-repo1",
+      "url": "https://github.com/octocat/test-repo1",
+      "files": []
+    },
+    {
+      "name": "Spoon-Knife",
+      "url": "https://github.com/octocat/Spoon-Knife",
+      "files": []
+    },
+    {
+      "name": "Hello-World",
+      "url": "https://github.com/octocat/Hello-World",
+      "files": []
+    },
+    {
+      "name": "git-consortium",
+      "url": "https://github.com/octocat/git-consortium",
+      "files": []
+    },
+    {
+      "name": "hello-worId",
+      "url": "https://github.com/octocat/hello-worId",
+      "files": []
+    }
+  ],
+  "secrets_found": [],
+  "interesting_files": [],
+  "summary": {
+    "target": "octocat",
+    "scan_duration": "0:03:51.145872",
+    "repos_scanned": 8,
+    "files_analyzed": 0,
+    "secrets_discovered": 0,
+    "critical_finds": 0,
+    "high_finds": 0,
+    "medium_finds": 0,
+    "interesting_files_count": 0
+  }
+}

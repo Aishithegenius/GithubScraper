@@ -1,0 +1,35 @@
+2026-05-16 15:27:58,436 [INFO] [32m[+] Output directory: ./github_recon_output\recon_20260516_152758[0m
+2026-05-16 15:27:58,454 [INFO] [36m[*] Starting reconnaissance on: octocat[0m
+2026-05-16 15:28:42,677 [INFO] [36m[*] Found 8 repositories[0m
+2026-05-16 15:28:42,677 [INFO] [36m[1/8] Scanning repo: linguist[0m
+2026-05-16 15:29:07,214 [INFO] [36m[2/8] Scanning repo: boysenberry-repo-1[0m
+2026-05-16 15:29:53,033 [INFO] [36m[3/8] Scanning repo: octocat.github.io[0m
+2026-05-16 15:30:10,684 [INFO] [36m[4/8] Scanning repo: test-repo1[0m
+2026-05-16 15:30:27,780 [INFO] [36m[5/8] Scanning repo: Spoon-Knife[0m
+2026-05-16 15:30:45,194 [INFO] [36m[6/8] Scanning repo: Hello-World[0m
+2026-05-16 15:31:01,040 [INFO] [36m[7/8] Scanning repo: git-consortium[0m
+2026-05-16 15:31:27,692 [INFO] [36m[8/8] Scanning repo: hello-worId[0m
+2026-05-16 15:31:49,613 [INFO] [32m[+] JSON report: ./github_recon_output\recon_20260516_152758\report_20260516_152758.json[0m
+2026-05-16 15:31:49,616 [INFO] [32m[+] HTML report: ./github_recon_output\recon_20260516_152758\report_20260516_152758.html[0m
+2026-05-16 15:40:52,460 [INFO] [32m[+] Output directory: ./github_recon_output\recon_20260516_154052[0m
+2026-05-16 15:40:52,465 [INFO] [36m[*] Starting reconnaissance on: octocat[0m
+2026-05-16 15:41:42,993 [INFO] [36m[*] Found 8 repositories[0m
+2026-05-16 15:41:42,994 [INFO] [36m[1/8] Scanning repo: git-consortium[0m
+2026-05-16 15:42:47,926 [INFO] [32m   -> Found 0 items in git-consortium[0m
+2026-05-16 15:42:47,927 [INFO] [36m[2/8] Scanning repo: hello-worId[0m
+2026-05-16 15:43:03,331 [INFO] [32m   -> Found 1 items in hello-worId[0m
+2026-05-16 15:43:03,332 [INFO] [36m[3/8] Scanning repo: test-repo1[0m
+2026-05-16 15:43:09,928 [INFO] [32m   -> Found 3 items in test-repo1[0m
+2026-05-16 15:43:09,928 [INFO] [36m[4/8] Scanning repo: boysenberry-repo-1[0m
+2026-05-16 15:43:15,709 [INFO] [32m   -> Found 3 items in boysenberry-repo-1[0m
+2026-05-16 15:43:15,709 [INFO] [36m[5/8] Scanning repo: Spoon-Knife[0m
+2026-05-16 15:43:22,629 [INFO] [32m   -> Found 3 items in Spoon-Knife[0m
+2026-05-16 15:43:22,630 [INFO] [36m[6/8] Scanning repo: linguist[0m
+2026-05-16 15:44:02,175 [INFO] [32m   -> Found 0 items in linguist[0m
+2026-05-16 15:44:02,176 [INFO] [36m[7/8] Scanning repo: Hello-World[0m
+2026-05-16 15:44:41,240 [INFO] [32m   -> Found 0 items in Hello-World[0m
+2026-05-16 15:44:41,241 [INFO] [36m[8/8] Scanning repo: octocat.github.io[0m
+2026-05-16 15:45:22,606 [INFO] [32m   -> Found 0 items in octocat.github.io[0m
+2026-05-16 15:45:37,800 [INFO] [32m[+] JSON report: ./github_recon_output\recon_20260516_154052\report_20260516_154052.json[0m
+2026-05-16 15:45:37,815 [INFO] [32m[+] HTML report: ./github_recon_output\recon_20260516_154052\report_20260516_154052.html[0m
+2026-05-16 15:45:37,827 [INFO] [32m[+] Scan complete. Results in: ./github_recon_output\recon_20260516_154052[0m
